@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Cores */
+:root {
+    --button-color: #0F9AFE;
+    --background-color: #EFF8FF;
+    --card-color: #293145;
+    --paragraph-color: #6E7275;
+    --text-color: #FFFFFF;
+    --color: #293145;
+}
+
+/* Fontes */
+h1 {
+    font-size: 1.8rem;
+    color: var(--color);
+}
+
+h2, h3 {
+    font-size: 1.5rem;
+    color: var(--card-color);
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: 0.8rem;
+    color: var(paragraph-color);
+
+    line-height: 1.5rem;
+}
+
+/* Header */
+.cabecario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 2rem 1.5rem 0 1.5rem;
+}
+
+.cabecario section:nth-child(2) {
+    display: none;
+}
+
+.cabecario section:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.cabecario span {
+    width: 1.5rem;
+    height: 0.2rem;
+    
+    background-color: black;
+}
+
+main {
+    display: grid;
+    grid-area:  "introducao",
+                "como-funciona",
+                "baixar-app",
+                "planos",
+                "contato";
+
+    margin: 3rem 2rem 0 2rem;
+}
+ 
+/* 1º Article */
+.introducao, 
+.como-funciona, 
+.como-funciona section,
+.baixar-app,
+.planos,
+.section-container,
+.section-container section,
+.contato {
+    display: flex;
+    flex-direction: column;
+}
+
+.introducao h1,
+.baixar-app h3,
+.contato h2 { 
+    margin-bottom: 1rem;
+} 
+
+.introducao button {
+    background-color: var(--button-color);
+    color: var(--text-color);
+
+    border: none;
+    border-radius: 2rem;
+
+    height: 2.5rem;
+    width: 10rem;
+
+    font-size: 1rem;
+}
+
+.introducao img,
+.baixar-app img {
+    height: 100%;
+    width: 100%;
+}
+
+/* 2º Article */
+.como-funciona {
+   text-align: center;
+
+   gap: 2rem;
+}
+
+.como-funciona section {
+    gap: 2rem;
+    
+    padding: 0 2rem 0 2rem;
+}
+
+/* 3º Article */
+.baixar-app {
+    text-align: center;
+
+    gap: 2rem;
+
+    margin: 2rem 0 2rem 0;
+    background-color: var(--background-color);
+    padding: 2rem 1rem 2rem 1rem;
+}
+
+.baixar-app section:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+
+    gap: 0.5rem;
+}
+
+/* 4º Article */
+.planos {
+    gap: 2rem;
+    text-align: center;
+
+    margin-bottom: 2rem;
+}
+
+.planos .section-container  {
+    border-radius: 1rem;
+}
+
+.planos .section-container,
+.planos .section-container section {
+    justify-content: center;
+    align-items: center;
+    
+    gap: 1rem;
+}
+
+.section-container section:nth-child(2) { 
+    color: var(--text-color);
+    background-color: var(--card-color);
+    padding: 2rem 1rem 2rem 1rem;
+
+    border-radius: 1rem;
+}
+
+.section-container div {
+    display: flex;
+    flex-direction: row;
+}
+
+.section-container section:nth-child(1),
+.section-container section:nth-child(3) { 
+    background-color: var(--background-color);
+    padding: 2rem 1rem 2rem 1rem;
+
+    border-radius: 1rem;
+}
+
+.planos button {
+    height: 2.5rem;
+    width: 10rem;
+
+    color: var(--text-color);
+    background-color: var(--button-color);
+
+    border-radius: 2rem;
+    border: none;
+}
+
+/* 4º Article */
+.contato {
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+    text-align: center;
+}
+
+.contato img {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+.contato section {
+    position: absolute;
+
+    padding: 0 1rem 0 1rem;
+}
+
+.contato h2 {
+    color: var(--text-color);
+}
+
+.contato p {
+    color: #DBDBDB;
+}
+
+.contato input {
+    background: transparent;
+    border: none;
+    border-bottom: 0.1rem solid var(--text-color);
+
+    padding: 1rem;
+}
+
+.contato ::placeholder {
+    color: var(--text-color);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    
+    padding: 1rem;
+
+    color: var(--color);
+}
+
+/*------------------------------------- VERSÃO MOBILE ---------------------------------------------*/
+@media screen and (min-width: 550px) {
+    main, .cabecario {
+        margin: 3rem 3rem 0 3rem;
+    }
+    .cabecario {
+        justify-content: space-around;
+    }
+    .como-funciona section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        padding: 0;
+
+        justify-content: center;
+    }
+    .baixar-app img {
+        height: 90%;
+        width: 90%;
+    }
+    .baixar-app, 
+    .contato section {
+        padding: 2rem 4rem 2rem 4rem;
+    }
+    .planos section {
+        padding: 0 4rem 0 4rem;
+    }
+
+}
+
+
+/*----------------------------- TABLETS E CELULARES DE BAIXA RESOLUÇÃO ----------------------------*/
+@media screen and (min-width: 700px) {
+    .cabecario {
+        justify-content: space-between;
+    }
+    .cabecario section:last-child {
+        display: none;
+    }
+    .cabecario section:nth-child(2) {
+        display: flex;
+        flex-direction: row;
+
+        gap: 1rem;
+    }
+    .introducao {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .planos .section-container {
+        flex-direction: row;
+        padding: 0;
+    }
+    .planos .section-container section {
+        height: 23rem;
+    }
+}
+
+/*---------------------------------------------- TABLETS ------------------------------------------*/
+@media screen and (min-width: 780px) {
+    .cabecario {
+        justify-content: space-around;
+    }
+    .baixar-app img {
+        height: 80%;
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    main {
+        margin: 5rem;
+    }
+    .cabecario {
+        margin: 3rem 5rem 0 5rem;
+    }
+    .cabecario section:nth-child(2) {
+        gap: 4rem;
+    }
+    .como-funciona,
+    .planos {
+        gap: 5rem;
+    }
+    .baixar-app {
+        margin: 5rem 0 5rem 0;
+    }
+    .baixar-app img {
+        height: 60%;
+        width: 60%;
+    }
+    .planos .section-container section {
+        height: 25rem;
+    }
+}
